@@ -61,7 +61,6 @@ export default function Project ({ blok }) {
               style={{ width: '100%', height: 'auto' }}
             >
               <source src={blok.video.filename} type='video/mp4' />
-              <source src='movie.ogg' type='video/ogg' />
               Your browser does not support the video tag.
             </video>
           )}

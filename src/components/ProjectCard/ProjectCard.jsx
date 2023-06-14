@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography'
 import NextMuiLink from '@/components/NextMuiLink'
 import Image from 'next/image'
 export default function ProjectCard ({ project }) {
-  console.log(project)
   return (
     <Stack
       component={Card}
@@ -53,11 +52,11 @@ export default function ProjectCard ({ project }) {
           transform: 'translate(-50%,-50%)',
           width: 1,
           paddingInline: 3,
-          whiteSpace: 'nowrap',
           opacity: 0,
           transition: 'opacity 0.3s ease',
           transitionDelay: '0.2s',
-          color: 'white'
+          color: 'white',
+          overflow: 'hidden'
         }}
         justifyContent='center'
         alignItems='center'
@@ -67,7 +66,6 @@ export default function ProjectCard ({ project }) {
           variant='button'
           component='h3'
           align='center'
-          sx={{ width: 1, textOverflow: 'ellipsis', overflow: 'hidden' }}
         >
           {project?.title}
         </Typography>

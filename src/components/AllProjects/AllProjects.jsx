@@ -72,7 +72,11 @@ export default function AllProjects ({ blok }) {
         <Stack
           justifyContent='center'
           alignItems='center'
-          sx={{ position: 'relative', width: 1, paddingInline: { sm: '10%' } }}
+          sx={{
+            position: 'relative',
+            width: 1,
+            paddingInline: { sm: '10%', md: 0 }
+          }}
         >
           {/* Background Boxes */}
           <Box
@@ -113,12 +117,12 @@ export default function AllProjects ({ blok }) {
           {/* Projects Grid */}
           <Grid
             container
-            spacing={{ xs: 5, md: 8, lg: 2 }}
+            spacing={{ xs: 5, md: 4, lg: 2 }}
             sx={{
               position: 'relative',
               zIndex: 5,
               width: 1,
-              minWidth: projects.length <= 3 ? 'max-content' : 'min-content',
+              minWidth: projects.length <= 3 ? 'fit-content' : 'min-content',
               margin: 0
             }}
           >
