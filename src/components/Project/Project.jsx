@@ -9,9 +9,9 @@ import Typography from '@mui/material/Typography'
 export default function Project ({ blok }) {
   return (
     <Container
-      maxWidth='lg'
+      maxWidth='md'
       {...storyblokEditable(blok)}
-      sx={{ paddingInline: { md: 20 }, paddingBlock: 10 }}
+      sx={{ paddingInline: { sm: 10 }, paddingBlock: 10 }}
     >
       <Stack spacing={5}>
         <Stack
@@ -37,7 +37,16 @@ export default function Project ({ blok }) {
                 borderRadius: '50%',
                 width: 125,
                 height: 125,
-                backgroundColor: 'primary.light'
+                backgroundColor: 'primary.light',
+                '&:before':{
+                  content: '""',
+                  position:'absolute',
+                  right: 5,
+                  width:50,
+                  height:50,
+                  borderRadius: '50%',
+                  border: '1px solid white'
+                }
               }}
             />
           </Box>
@@ -65,7 +74,17 @@ export default function Project ({ blok }) {
             </video>
           )}
         </Stack>
-        <Box>{render(blok.description)}</Box>
+        <Box sx={{
+          '& img': {
+            display:'block',
+            marginInline: 'auto',
+            marginBlock: 5,
+            maxWidth: 1,
+            maxHeight: 400,
+            height: 'auto',
+            objectFit: 'cover'
+          }
+        }}>{render(blok.description)}</Box>
       </Stack>
     </Container>
   )
